@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="images/forms.png">
+    <title>HTML Forms</title>
+</head>
+<body class="container-fluid">
+    <!--FORM-->
+    <div class="row">
+    <div id="firstDiv" class="col-sm-4">
+   <h4 class="text-center">PERSONAL INFORMATION FORM</h4>
+   <form onsubmit="submitData(event)">
+    <div class="form-row">
+    <div class="col-sm-4">
+    <label for="fname">First name</label>
+    </div>
+    <div class="col-sm-8">
+    <input type="text" id="fname" name="fname" required>
+  </div>
+     </div><br>
+    <div class="form-row">
+      <div class="col-sm-4">
+    <label for="lname">Last name</label>
+    </div>
+    <div class="col-sm-8">
+    <input type="text" id="lname" name="lname" required>
+    </div>
+    </div>
+    <br>
+    <div class="form-row">
+     <div class="col-sm-4">
+    <label for="address">Address</label>
+     </div>
+    <div class="col-sm-8">
+    <textarea id="address" name="address" required></textarea>
+    </div>
+    </div>
+    <br>
+    <div class="form-row">
+      <div class="col-sm-4">
+    <label for="pincode">Pin Code</label>
+      </div>
+      <div class="col-sm-8">
+    <input type="text" id="pincode" name="pincode" required>
+  </div>
+    </div>
+    <br>
+    <div class="form-row">
+      <div class="col-sm-4">
+    <label for="gender">Gender</label>
+    </div>
+    <div class="col-sm-8" id="gender">
+       &nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="form-check-input" type="radio" name="gender" value="Male" required>Male
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="form-check-input" type="radio" name="gender" value="Female" required>Female
+     </div> 
+    </div>
+     <br>
+     <div class="form-row">
+      <div class="col-sm-4">
+    <label for="food">Choice of food</label>
+  </div>
+       <div class="col-sm-8" id="food">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="form-check-input" type="checkbox" id="option1" name="food-choice" value="Idli and Dosa">
+          Idli and dosa
+         <br>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="form-check-input" type="checkbox" id="option2" name="food-choice" value="Samosa">
+          Samosa
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="form-check-input" type="checkbox" id="option3" name="food-choice" value="Chapathi and Channa">
+          Chapathi & Channa
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="form-check-input" type="checkbox" id="option4" name="food-choice" value="Masala Dosa">
+          Masala Dosa
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="form-check-input" type="checkbox" id="option5" name="food-choice" value="Puri and Aloo">
+          Puri and Aloo
+      </div>
+    </div>
+     <br>
+    <div class="form-row">
+      <div class="col-sm-4">
+    <label for="state">State</label>
+      </div>
+      <div class="col-sm-8">
+    <input type="text" id="state" name="state" required>
+  </div>
+</div>
+   <br>
+   <div class="form-row">
+    <div class="col-sm-4">
+   <label for="country">Country</label>
+    </div>
+    <div class="col-sm-8">
+   <input type="text" id="country" name="country" required>
+   </div>
+   </div>
+      <br>
+      <div class="text-center">
+     <input type="submit">
+     </div>
+   </form>
+  </div>
+   <!--TABLE-->
+   <div id="secondDiv" class="col-sm-8">
+   <h4 class="text-center">PERSONAL INFORMATION TABLE</h4>
+   <table class="table table-bordered" id="data-table">
+       <tr><th>First Name</th><th>Last Name</th><th>Address</th><th>Pincode</th><th>Gender</th><th>Food</th><th>State</th><th>Country</th></tr>
+   </table>
+  </div>
+</div>
+   <!--SCRIPTS-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
