@@ -6,11 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Index.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="icon" href="images/pokemonIcon.png">
-    <title>Pokemon Information</title>
+    <link rel="icon" href="images/WeatherIcon.png">
+    <title>Weather Information</title>
 </head>
 <body>
-
+    <div class="container-fluid">
+    <!--HEADING-->
+    <header class="heading text-center">
+        <img src="images/WeatherPhoto.png" width="70" height="70" alt="Weather Photo"> <h2>WEATHER INFORMATION</h2> 
+    </header><br>
+    <!---WEATHER FORM-->
+    <form class="weatherForm text-center" onsubmit="weatherData(); return false;">
+        <div class="row">
+        <div class="col-md-4 p-2">
+        <div class="row">
+        <div class="col-md-2">
+        <label class="Label" for="city">City </label>
+        </div>
+        <div class="col-md-10">
+        <input type="text" class="cityName form-control" id="city" required>
+        </div>
+        </div> 
+        </div>
+        <div class="col-md-6 p-2">
+        <div class="row">
+        <div class="col-md-3">
+        <label class="Label" for="forecast">Forecast Type</label>
+        </div>
+        <div class="col-md-9">
+        <input type="radio" class="Forecast form-check-input" name="forecast" value="Forecast for 5 days" required>&nbsp;Forecast for 5 days &nbsp;
+        <input type="radio" class="Forecast form-check-input" name="forecast" value="Current Conditions" required>&nbsp; Current Conditions &nbsp;
+        <input type="radio" class="Forecast form-check-input" name="forecast" value="Weather Alarms" required> &nbsp;Weather Alarms &nbsp; 
+       </div>
+        </div> 
+       </div>
+        <div class="col-md-2 p-2">
+        <input type="submit" class="btn btn-primary w-100">
+        </div>
+        </div>
+    </form><br>
+    <!--ERROR MESSAGE-->
+     <p class="error-message text-center"></p><br>
+    <!--WEATHER DATA-->
+    <div class="weatherData">
+       <h3 class="weatherHeading text-center"></h3>
+       <div class="weatherInfo"></div>
+    </div>
+    </div>
    <!--SCRIPTS-->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>

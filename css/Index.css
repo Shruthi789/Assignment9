@@ -1,19 +1,42 @@
-/*Body Style*/
+/*Background style*/
 *{
-    background-color:lightgoldenrodyellow;
+    background-color: lavender;
 }
-/*Heading Style*/
-h3{
-  color:blueviolet;
+/*Heading style*/
+.heading h2{
+    color:darkmagenta;
 }
-header{
-    border:2px dashed blue;
+
+/*Form Label Style */
+.weatherForm{
+    color:blue;
 }
-/* Message Style*/
-#message{
-    color:green;
+.Label{
+    font-weight:bold;
+    font-size:15px;
 }
-/*Table Style-Pokemon Name Style*/
-td:nth-child(2)::first-letter{
-    text-transform: uppercase;
+.Label::after{
+    content: '*';
+    color:red;
+}
+/*Error Message Styling*/
+.error-message{
+    color:red;
+}
+/*Weather Data*/
+.weatherHeading{
+    color:darkmagenta;
+}
+.weatherInfo{
+   color: #3F000F;
+}
+@media screen and (max-width: 425px) {
+    .weatherImage {
+      text-align:center;
+    }
+  }
+  
+/*Card Item*/
+.CardItem{
+    border:2px solid grey !important;
 }
