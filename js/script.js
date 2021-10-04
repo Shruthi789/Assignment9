@@ -19,7 +19,7 @@ const apiKey="x04IPgPVkErmAKXgztU4M2P7jdndCCm9";
 /*Getting the locationKey based on city*/
 const getLocationKey=async(city)=>{
                                    try{
-                                   const cityResponse=await fetch(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${city}`);
+                                   const cityResponse=await fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${city}`);
                                    const cityData=await cityResponse.json();
                                    const cityIndex=cityData.findIndex((c)=>c.EnglishName===city);
                                    if(cityIndex!==-1){
@@ -38,17 +38,17 @@ const forecastData=async(value,key,city)=>{
         let forecastResponse;
         let forecastData;
         if(value==="Forecast for 5 days"){
-            forecastResponse=await fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${key}?apikey=${apiKey}`);
+            forecastResponse=await fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${key}?apikey=${apiKey}`);
             forecastData=await forecastResponse.json();
             dailyForecast(city,forecastData);
         }
         else if(value==="Current Conditions"){
-          forecastResponse=await fetch(`http://dataservice.accuweather.com/currentconditions/v1/${key}?apikey=${apiKey}`);
+          forecastResponse=await fetch(`https://dataservice.accuweather.com/currentconditions/v1/${key}?apikey=${apiKey}`);
           forecastData=await forecastResponse.json();
           currentconditions(city,forecastData);
         }
         else{
-          forecastResponse=await fetch(`http://dataservice.accuweather.com/alarms/v1/1day/${key}?apikey=${apiKey}`);
+          forecastResponse=await fetch(`https://dataservice.accuweather.com/alarms/v1/1day/${key}?apikey=${apiKey}`);
           forecastData=await forecastResponse.json();
           weatherAlarms(city,forecastData);
         }
